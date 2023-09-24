@@ -1,7 +1,10 @@
 const express = require('express');
 const router = express.Router();
 
-const {AddNewSong,GetSongs, UpdateSong} = require("../controller/songRouteController")
+const {AddNewSong,GetSongs, UpdateSong} = require("../controller/songRouteController");
+
+const multer = require('multer');
+const upload = multer({ dest: 'uploads/' })
 
 /* TEST ROUTE */
 router.get("/test",(req,res)=>{
@@ -9,10 +12,10 @@ router.get("/test",(req,res)=>{
 })
 
 //ADD SONG (CREATE)
-router.post("/addNewSong",AddNewSong);
+router.post("/addNewSong", upload.single('artwork'),AddNewSong);
 
 //GET SONG (READ)
-router.post("/getSong",GetSongs);
+router.get("/getSongs",GetSongs);
 
 //Update
 

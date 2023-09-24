@@ -12,7 +12,7 @@ router.get("/test",(req,res)=>{
 router.post("/addArtist",AddArtist);
 
 //GET ARTIST (READ)
-router.post("/getArtist",GetArtist);
+router.get("/getArtist",GetArtist);
 
 
 module.exports = router;

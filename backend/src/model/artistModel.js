@@ -6,10 +6,10 @@ const artistSchema = new mongoose.Schema({
         required: true
     },
     dob: {
-        type: Date,
+        type: String,
         required: true
     },
-    Bio: {
+    bio: {
         type: String,
         required: true
     }

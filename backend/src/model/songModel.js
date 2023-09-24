@@ -7,7 +7,7 @@ const songSchema = new mongoose.Schema({
         required: true
     },
     releaseDate: {
-        type: Date,
+        type: String,
         required: true
     },
     artWork: {
@@ -21,7 +21,7 @@ const songSchema = new mongoose.Schema({
     }],
     rating:{
         type: Number,
-        required: true
+        default: 0
     }
 });
 
