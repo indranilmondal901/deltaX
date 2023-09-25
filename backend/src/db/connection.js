@@ -11,9 +11,3 @@ mongoose.connect(process.env.DB_URL,{
 }).catch((err)=>{
     console.log("Failed in Connting to DB due to => " + err)
 })
-
-
-
-
-
-// const DB_URL = "mongodb+srv://indranilmondal901:Abcd1234@cluster0.vqrb0fs.mongodb.net/?retryWrites=true&w=majority"
